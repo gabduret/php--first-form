@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  margin-left: 0px;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/*
+* Initialisation
+*/
+.book-block
+{
+  width: 38%;
+  height: 250px;
+  color: #353333;
+  padding: 20px;
+  float: left;
+  margin: 4%;
+  background: #E8E8E8;
+  box-shadow: 0 0 10px 0 rgba(62, 62, 58, 0.5);
+}
+
+.book-right,
+.book-left
+{
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+.book-right
+{
+  
+}
+.book-left
+{
+ 
+}
+
+
+
+
+/*
+* Left Part
+*/
+.book-nb-name
+{
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.book-number
+{
+  width: 13%;
+}
+.book-name
+{
+  width: 78%;
+  margin-left: 2%
+}
+
+.book-title
+{
+  margin: 15px; 
+  font-weight: 500;
+}
+.book-description
+{
+  margin-bottom: 10px;
+}
+.book-quantity
+{
+  margin-bottom: 20px;
+}
+
+
+
+
+/*
+* Right Part
+*/
+.book-image
+{
+  height: 90%;
+  overflow: hidden;
+ 
+}
+
+.book-image img
+{
+  height: 100%;
+}
+
+.book-edition
+{
+  display: flex;
+}
+.book-edition p
+{
+  width: 49%;
+
+  
+}
+.book-edition p:last-child
+{
+  margin-left: 2%;
+
+}
+
+
+
+
