@@ -1,23 +1,30 @@
 <?php
-
-// print_r($_POST['edit-id']);
-// echo 'bouh';
-
-
 $query = $pdo->query('SELECT * FROM books WHERE id = ' . $_POST["edit-id"]);
 $books = $query->fetch();
-
-// echo '<pre>';
-// print_r($books);
-// echo '</pre>';
 ?>
 
 
+
+<section class="nav-full">
+    <div class="nav-header">
+        <h1><a href="library">Mangathèque</a></h1>
+        <!-- <h2>Hi, <?= $users->user_name ?></h2>
+        <h3>Welcome !</h3> -->
+    </div>
+    <nav class="nav-item">
+        <ul>
+            <li><a href="add">Add books</a></li>
+            <li><a href="offline.php">Offline</a></li>
+        </ul>
+    </nav>
+</section>
+      
+<section class="form">
     <form action="library" method="post">
             <input type="number" name="book-numb" value="<?= $books->number ?>" placeholder="21" id="book-numb">
             <label for="book-numb">Number</label>
             <br>
-	
+      
             <input type="text" name="book-name" value="<?= $books->name ?>" placeholder="Bleach" id="book-name">
             <label for="book-name">Name</label>
             <br>
@@ -50,7 +57,7 @@ $books = $query->fetch();
 
             <br>
             <input type="hidden" name="edit-id" value="<?= $_POST['edit-id'] ?>">
-         	<input type="hidden" name="edit">
+            <input type="hidden" name="edit">
             <input type="submit" value="submit">
         </form>
-        
+</section>

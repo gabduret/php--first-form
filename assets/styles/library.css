@@ -69,7 +69,8 @@ body
 * Books library Part
 */
 
-.books
+.books,
+.form
 {
 	width: 80%;
 	height: 100%;

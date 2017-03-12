@@ -1,9 +1,5 @@
 <?php
 
-
-include 'includes/config.php';
-include 'includes/password.php';
-
 // echo '<pre>';
 // print_r($books);
 // echo '</pre>';

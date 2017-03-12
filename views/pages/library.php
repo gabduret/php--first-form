@@ -1,6 +1,6 @@
 <?php
-
 include 'views/includes/handle_form.php';
+
 
 // setcookie('Marjorie' ,'tête bizarre', time() + 1000, '/');
 // La date d'expiration est antérieur, le cookie sera supprimé
@@ -35,58 +35,45 @@ include 'views/includes/handle_form.php';
 // echo '</pre>';
 // exit();
 
-?><!-- 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Mangathèque</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="../src/styles/style.css">
-    <link rel="stylesheet" href="../src/styles/library.css">
-  </head>
-  <body> -->
+?>
+<section class="nav-full">
+	<div class="nav-header">
+		<h1><a href="library">Mangathèque</a></h1>
+		<!-- <h2>Hi, <?= $users->user_name ?></h2>
+		<h3>Welcome !</h3> -->
+	</div>
+	<nav class="nav-item">
+		<ul>
+			<li><a href="add">Add books</a></li>
+			<li><a href="offline.php">Offline</a></li>
+		</ul>
+	</nav>
+	
+	<nav class="nav-books-list">
+		<ul>
+			<?php foreach($books as $_books): ?>
+				<li class="nav-books-item"><?= $_books->name?></li>
+			<?php endforeach; ?>
+		<ul>
+	</nav>
 
-	<section class="nav-full">
-		<div class="nav-header">
-			<h1><a href="library">Mangathèque</a></h1>
-			<!-- <h2>Hi, <?= $users->user_name ?></h2>
-			<h3>Welcome !</h3> -->
-		</div>
-		<nav class="nav-item">
-			<ul>
-				<li><a href="add">Add books</a></li>
-				<li><a href="offline.php">Offline</a></li>
-			</ul>
-		</nav>
-		
-		<nav class="nav-books-list">
-			<ul>
-				<?php foreach($books as $_books): ?>
-					<li class="nav-books-item"><?= $_books->name?></li>
-				<?php endforeach; ?>
-			<ul>
-		</nav>
+	<div class="messages success">
+        <?php foreach($success_messages as $_message): ?>
+        	<h4>success</h4>
+        	<p><?= "$_message" ?></p>
+        <?php endforeach ?>
+    </div>
 
-		<div class="messages success">
-            <?php foreach($success_messages as $_message): ?>
-            <p><?= $_message ?></p>
-            <?php endforeach ?>
-	    </div>
+    <div class="messages errors">
+        <?php foreach($error_messages as $_key => $_message): ?>
+       		<h4>Error</h4>
+        	<p><?= "$_key : $_message" ?></p>
+        <?php endforeach ?>
+    </div>
+</section>
 
-	    <div class="messages errors">
-            <?php foreach($error_messages as $_key => $_message): ?>
-            <p><?= "$_key : $_message" ?></p>
-            <?php endforeach ?>
-	    </div>
-
-
-	</section>
-
-
-
-	<section class="books">
-	    <?php foreach($books as $_books): ?>
+<section class="books">
+    <?php foreach($books as $_books): ?>
 	    <div class="book-block" data-id="<?= $_books->id ?>">
 	      	<div class="book-left">
 	        	<div class="book-nb-name">
@@ -116,9 +103,5 @@ include 'views/includes/handle_form.php';
 		        </div>
 	      	</div>
 	    </div>
-	    <?php endforeach; ?>
-	</section>
-
-
-  </body>
-</html>
+    <?php endforeach; ?>
+</section>

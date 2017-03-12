@@ -37,14 +37,6 @@ else if($q == 'login')
 {
     $page = 'login';
 }
-// else if(preg_match('/^edit\/[-_a-z0-9]+$/', $q))
-// {
-//     $page = 'edit';
-// }
-// else if(preg_match('/^article\/[-_a-z0-9]+$/', $q))
-// {
-//     $page = 'article';
-// }
 else
 {
     $page = '404';
