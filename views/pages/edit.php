@@ -1,10 +1,10 @@
 <?php
 $query = $pdo->query('SELECT * FROM books WHERE id = ' . $_POST["edit-id"]);
 $books = $query->fetch();
+
+
+
 ?>
-
-
-
 <section class="nav-full">
     <div class="nav-header">
         <h1><a href="library">Mangathèque</a></h1>
@@ -14,7 +14,7 @@ $books = $query->fetch();
     <nav class="nav-item">
         <ul>
             <li><a href="add">Add books</a></li>
-            <li><a href="offline.php">Offline</a></li>
+            <li><a href="offline">Offline</a></li>
         </ul>
     </nav>
 </section>

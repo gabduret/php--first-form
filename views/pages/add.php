@@ -12,7 +12,7 @@ include 'views/includes/handle_form.php';
     <nav class="nav-item">
         <ul>
             <li><a href="add">Add books</a></li>
-            <li><a href="offline.php">Offline</a></li>
+            <li><a href="offline">Offline</a></li>
         </ul>
     </nav>
 
