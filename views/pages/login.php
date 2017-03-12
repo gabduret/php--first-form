@@ -1,20 +1,33 @@
 <?php
 
 ?>
-<form action="#" method="post">
+<section class="nav-full">
+	<div class="nav-header">
+		<h1><a href="library">Mangathèque</a></h1>
+		<h2>Login</h2>
+		<h3>Welcome</h3>
+	</div>
+	<nav class="nav-item">
+		<h3>Navigation</h3>
+		<ul>
+			<li><a href="registration">Registration</a></li>
+		</ul>
+	</nav>
+</section>
 
-    <input type="text" value="" name="login" id="login">
-    <label for="login">Login</label>
-    <br>
+<section class="form">
+	<form action="#" method="post">
 
-    <input type="password" value="" name="password" id="password">
-    <label for="password">Password</label>
-    <br>
+	    <input type="text" value="" name="login" id="login">
+	    <label for="login">Login</label>
+	    <br>
 
-    <br>
-    <input type="hidden" name="logs">
-    <input type="submit" value="submit">
-</form>
+	    <input type="password" value="" name="password" id="password">
+	    <label for="password">Password</label>
+	    <br>
 
-<h3>Your'e not registrer ?</h3>
-<h3><a href="registration">Click here</a></h3>
+	    <br>
+	    <input type="hidden" name="logs">
+	    <input type="submit" value="submit">
+	</form>
+</section>

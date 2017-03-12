@@ -6,8 +6,8 @@ include 'views/includes/handle_form.php';
 <section class="nav-full">
     <div class="nav-header">
         <h1><a href="library">Mangathèque</a></h1>
-        <!-- <h2>Hi, <?= $users->user_name ?></h2>
-        <h3>Welcome !</h3> -->
+        <h2>Hi, <?= $_SESSION['login'] ?></h2>
+        <h3>Add your book</h3>
     </div>
     <nav class="nav-item">
         <ul>

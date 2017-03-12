@@ -26,19 +26,51 @@
 .book-right,
 .book-left
 {
-  width: 50%;
+  width: 60%;
   float: left;
   height: 100%;
 }
 .book-right
 {
-  
-}
-.book-left
-{
- 
+  width: 40%;
 }
 
+.book-interaction
+{
+  display: flex;
+  justify-content: center;
+  top: -15px;
+  right: -15px;
+  width: 100%;
+}
+
+.delete-button,
+.edit-button
+{
+  background: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #262626;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover,
+.edit-button:hover
+{
+  background:  #262626;
+  color: #c2c2c2;
+}
+
+.book-interaction form
+{
+  margin-left: 15%;
+}
 
 
 
@@ -74,9 +106,12 @@
 }
 .book-quantity
 {
-  margin-bottom: 20px;
 }
-
+.book-dateAdd
+{
+  margin-bottom: 20px;
+  font-size: 13px;
+}
 
 
 

@@ -2,24 +2,18 @@
 
 // Messages
 $error_logs = array();
+
 // Start session
 session_start();
-
 
 // REGISTRATION PART
 if(!empty($_POST))
 {
-
-	// Retrieve data
-	$login 		= trim($_POST['login']);
-	$password 	= trim($_POST['password']);
-
-
 	// Login errors
-    if(empty($login))
+    if(empty($_POST['login']))
         $error_logs['login'] = 'should not be empty';
     // Password
-    if(empty($password))
+    if(empty($_POST['password']))
     	$error_logs['password'] = 'should not be empty';
 
 	// Add refused message
@@ -58,11 +52,9 @@ if(!empty($_POST))
 	{
 
 		// Retrieve inputs
-		$login    = $_POST['login'];
 		define('SALT', 'toto');
+		$login    = $_POST['login'];
 		$password = hash('sha256',SALT.$_POST['password']); // Hash + Salt
-
-		echo $login;
 
 
 
@@ -81,12 +73,10 @@ if(!empty($_POST))
 			// User can enter in website
 		    header('Location: library');
 		}
-
 		else
 		{
 			// Add success message
 	        $error_login[] = 'Login refused !';
-		    echo 'You shall not pass !';
 		}
 	}
 }

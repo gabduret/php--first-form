@@ -9,6 +9,7 @@ include 'views/includes/handle_form.php';
 		<h3>Welcome !</h3>
 	</div>
 	<nav class="nav-item">
+		<h3>Navigation</h3>
 		<ul>
 			<li><a href="add">Add books</a></li>
 			<li><a href="offline">Disconnection</a></li>
@@ -16,6 +17,7 @@ include 'views/includes/handle_form.php';
 	</nav>
 	
 	<nav class="nav-books-list">
+		<h3>Book inventary</h3>
 		<ul>
 			<?php foreach($books as $_books): ?>
 				<li class="nav-books-item"><?= $_books->name?></li>
@@ -48,15 +50,17 @@ include 'views/includes/handle_form.php';
 		        </div>
 		        <p class="book-title"><?= $_books->title ?></p>
 		        <p class="book-description"><?= $_books->description ?></p>
-		        <p class="book-dateAdd"><?= $_books->date_add ?></p>
 		        <p class="book-quantity"><?= $_books->quantity ?> disponible</p>
+		        <p class="book-dateAdd"><?= $_books->date_add ?></p>
 
-				<form action="edit" method="post">
-					<input type="hidden" name="edit-id" value="<?= $_books->id; ?>">
-					<input type="submit" value="edit" name="submit">
-				</form>
-
-				<a href="?delete_id=<?= $_books->id;?>">supprimer</a>
+				<div class="book-interaction">
+					<a href="?delete_id=<?= $_books->id;?>" class="delete-button">Delete</a>
+							
+					<form action="edit" method="post">
+						<input type="hidden" name="edit-id" value="<?= $_books->id; ?>">
+						<input type="submit" value="edit" name="submit" class="edit-button">
+					</form>
+				</div>
 	      	</div>
 
 	      	<div class="book-right">

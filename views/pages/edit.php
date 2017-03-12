@@ -8,10 +8,11 @@ $books = $query->fetch();
 <section class="nav-full">
     <div class="nav-header">
         <h1><a href="library">Mangathèque</a></h1>
-        <!-- <h2>Hi, <?= $users->user_name ?></h2>
-        <h3>Welcome !</h3> -->
+        <h2>Hi, <?= $_SESSION['login'] ?></h2>
+        <h3>Edit your book</h3>
     </div>
     <nav class="nav-item">
+        <h3>Navigation</h3>
         <ul>
             <li><a href="add">Add books</a></li>
             <li><a href="offline">Offline</a></li>
